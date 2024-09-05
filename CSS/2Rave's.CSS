@@ -1,0 +1,204 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@font-face {
+    font-family: 'Incompleeta';
+    src: url('/Font/IncompleetaRegular.ttf');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Montserrat", system-ui;
+    width: 100%;
+}
+
+nav {
+    font-family: 'Incompleeta';
+    color: white;
+    background-color: black;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 10px;
+}
+
+.nav-items {
+    display: flex;
+    gap: 20px;
+    margin-left: 50px;
+}
+
+.navbar p {
+    margin: 0;
+}
+
+.nav-img1, .nav-img2 {
+    height: 50px;
+    width: auto;
+}
+
+.section {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    color: white;
+    width: 100%;
+    text-align: center;
+}
+
+.green {
+    background-color: #27f76d;
+}
+
+.black {
+    background-color: #000000;
+}
+
+.centered-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.heading1, .heading11 {
+    font-family: 'Incompleeta';
+    color: black;
+    margin: 20px 0;
+}
+
+.heading1 {
+    font-size: 150px;
+}
+
+.heading11 {
+    font-size: 200px;
+}
+
+.img11 {
+    display: block;
+    margin: 1rem auto;
+    max-width: 100%;
+    height: auto;
+}
+
+.black-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.black-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+}
+
+.pg2h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    font-family: 'Incompleeta';
+}
+
+.pg2p1 {
+    font-size: 1.25rem;
+    line-height: 1.5;
+}
+
+.black-img {
+    width: 100%;
+    height: auto;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .section {
+        padding: 10px;
+    }
+
+    .heading1 {
+        font-size: 100px;
+    }
+
+    .black-content {
+        grid-template-columns: 1fr;
+    }
+
+    .black-img {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .heading11 {
+        font-size: 60px;
+    }
+
+    .p33 {
+        font-size: 130px;
+    }
+}
+
+@media (max-width: 480px) {
+    .heading1 {
+        font-size: 70px;
+    }
+
+    .heading11 {
+        font-size: 40px;
+    }
+
+    .p33 {
+        font-size: 24px;
+    }
+
+    .button1 {
+        font-size: 24px;
+        padding: 8px;
+    }
+}
+
+.button-box {
+    z-index: 1;
+    margin: 20px auto;
+    position: absolute;
+    top: 60%;
+    right: 50%;
+    transform: translateX(50%) translateY(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.button1 {
+    margin-top: 50px;
+    font-family: "Montserrat", system-ui;
+    font-weight: 500;
+    color: white;
+    background-color: #27f76d;
+    padding: 10px;
+    border: 1px solid;
+    cursor: pointer;
+    font-size: 50px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.button1:hover {
+    background-color: black;
+    color: #27f76d;
+}

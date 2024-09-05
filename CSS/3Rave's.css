@@ -1,0 +1,217 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@font-face {
+    font-family: 'Incompleeta';
+    src: url('/Font/IncompleetaRegular.ttf');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #27f76d;
+}
+
+.parent-container {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+}
+
+.whitebox {
+    position: relative;
+    margin: 0px 100px;
+    width: 400px;
+    height: 500px;
+    border: 2px solid black;
+    box-shadow: 15px 20px 0px;
+    background-color: white;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-auto-rows: min-content;
+    gap: 20px;
+    padding: 20px;
+    align-items: start;
+    justify-content: center;
+}
+
+.button-bx {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    text-align: center;
+}
+
+.buttondark2 {
+    width: 100%;
+    padding: 15px;
+    font-size: 1.5rem;
+    font-family: "Montserrat", system-ui;
+    font-weight: 500;
+    color: white;
+    background-color: #27f76d;
+    border: 1px solid black;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.buttondark2:hover {
+    background-color: black;
+    color: #27f76d;
+}
+
+.font-check {
+    font-family: "Montserrat", system-ui;
+    font-size: 10px;
+}
+
+.row {
+    display: contents;
+}
+
+.row h2, .row div {
+    text-align: center;
+    grid-column: span 1;
+}
+
+.row:first-of-type {
+    grid-column: span 3;
+    text-align: center;
+}
+
+.row h2 {
+    font-size: 200%;
+    font-family: "Montserrat", system-ui;
+}
+
+.row h3 {
+    font-family: "Montserrat", system-ui;
+    font-size: 100%;
+}
+
+.linearwhite {
+    color: black;
+    width: 100%;
+    height: 5px;
+}
+
+#Gamepass {
+    height: 70px;
+    width: auto;
+}
+
+.divider {
+    grid-column: span 3;
+    border: 1px solid black;
+    margin: 0px 20px;
+}
+
+body::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    z-index: -1;
+    right: 0;
+    width: 50%;
+    height: 100%;
+    background-color: black;
+}
+
+.right-side-text {
+    font-family: "Incompleeta", system-ui;
+    transform: rotate('75deg');
+}
+
+.billing-section {
+    grid-column: span 3;
+    font-size: 1.2rem;
+    text-align: left;
+}
+
+.billing-section h3 {
+    margin: 5px 0;
+}
+
+.divider2 {
+    grid-column: span 3;
+    border: 1px solid black;
+    margin: 10px 0;
+}
+
+.final-price {
+    grid-column: span 3;
+    text-align: left;
+    grid-column: 2;
+    font-size: 150%;
+    font-family: 'incompleeta';
+}
+
+.rotated-text {
+    position: absolute;
+    top: 50%;
+    text-align: center;
+    right: 25%;
+    font-size: 200px;
+    transform: rotate(90deg);
+    transform-origin: right bottom;
+    color: white;
+    font-family: 'Incompleeta';
+    padding: 10px;
+    color: #27f76d;
+}
+
+@media (max-width: 1200px) {
+    .whitebox {
+        width: 400px;
+        height: auto;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .buttondark2 {
+        font-size: 1.2rem;
+    }
+
+    .rotated-text {
+        font-size: 150px;
+    }
+}
+
+@media (max-width: 768px) {
+    .whitebox {
+        width: 100%;
+        margin: 0 20px;
+        grid-template-columns: 1fr;
+    }
+
+    .buttondark2 {
+        font-size: 1rem;
+    }
+
+    .rotated-text {
+        font-size: 100px;
+        z-index: -55;
+    }
+}
+
+@media (max-width: 480px) {
+    .whitebox {
+        height: 60%;
+        padding: 10px;
+        gap: 10px;
+    }
+
+    .buttondark2 {
+        padding: 10px;
+        font-size: 0.8rem;
+    }
+
+    .rotated-text {
+        font-size: 80px;
+        z-index: -55;
+    }
+}

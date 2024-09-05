@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Main page
+        </title>
+        <style>
+          #background-video {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1;
+    transform: translate(-50%, -50%);
+
+}
+.img, .img1{
+    height: 50px;
+    width: auto;
+}
+h4{
+  display:flex;
+  align-items:center;
+  font-family:'Incompleta';
+}
+.font{
+  font-family:'Incompleta';
+  font-size:100px;
+  color:white;
+}
+.font1{
+  font-family:'Incompleta';
+  font-size:40px;
+  color:white;
+}
+.main{
+  height:600px;
+  width:1200px;
+}
+@media (max-width: 1200px) {
+  .main{
+  height:600px;
+  width:1200px;
+}
+}
+
+@media (max-width: 992px) {
+  .main{
+  height:496px;
+  width:992px;
+}
+}
+
+@media (max-width: 768px) {
+  .main{
+  height:384px;
+  width:768px;
+}
+}
+
+@media (max-width: 576px) {
+  .main{
+  height:288px;
+  width:576px;
+}
+}
+        </style>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<script src="https://kit.fontawesome.com/cff627a69e.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+      <video autoplay muted loop id="background-video">
+        <source src="Images 1/bgfilm.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
+            <div class="container-fluid">
+              <img src="Images 1/1.png" alt="Image" class="img">
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Games</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Cart</a>
+                  </li>
+                </ul>
+                <form class="d-flex" role="search">
+                  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                  <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+              </div>
+            </div>
+          </nav><br><br><center>
+          <img src="Images 1/ALL SOFTWARE AT ONE PLACE.png" alt="" class="main"><br><br><br><h1 class="font">MOST POPULAR</h1></center>
+          <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel" data-bs-theme="dark">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="Images 1/Microsoft.jpg" class="d-block w-100" alt="Microsoft" height="500px" onclick="location.href='software.html'">
+              </div>
+              <div class="carousel-item">
+                <img src="Images 1/Adobe.webp" class="d-block w-100" alt="Adobe" height="500px">
+              </div>
+              <div class="carousel-item">
+                <img src="Images 1/Windows.avif" class="d-block w-100" alt="Windows" height="500px">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div><br><br>
+          <div class="row">
+            <div class="col-3">
+              <nav id="navbar-example3" class="h-100 flex-column align-items-stretch pe-4 border-end">
+                <nav class="nav nav-pills flex-column">
+                  <a class="nav-link" href="#item-1">Recomended</a>
+                  <a class="nav-link" href="#item-2">Social</a>
+                  <a class="nav-link" href="#item-3">Work</a>
+                </nav>
+              </nav>
+            </div>
+          
+            <div class="col-9" id="center">
+              <div data-bs-spy="scroll" data-bs-target="#navbar-example3" data-bs-smooth-scroll="true" class="scrollspy-example-2" tabindex="0">
+                <div id="item-1">
+                  
+                  <h2 class="font1">Recomended</h2>
+                  <p><div class="card-group" style="text-align:center;" id="1">
+              <div id="carouselExampleIndicators" class="carousel slide" data-bs-theme="dark">
+                <div class="carousel-indicators">
+                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                </div>
+                <div class="carousel-inner">
+                  <div class="carousel-item active"><table><tr><td>
+                    <box><img src="Images 1/Microsoft.jpg" class="card-img-top" alt="Microsoft" height="200px"><span><h2 class="font1">Microsoft</h2></span><p class="card-text">10% off</p><a href="#" class="btn btn-primary">Specifications</a></box></td><td>
+                      <td>
+                        <box><img src="Images 1/amazon.jpg" class="card-img-top" alt="amazon" height="200px"><span><h2 class="font1">Amazon Prime</h2></span><p class="card-text">15% Cashback</p><a href="#" class="btn btn-primary">Specifications</a></box></td>
+                        <td>
+                          <box><img src="Images 1/Zomato.png" class="card-img-top" alt="zomato" height="200px"><span><h2 class="font1">Zomato</h2></span><p class="card-text">Rs. 100 off</p><a href="#" class="btn btn-primary">Specifications</a></box></td>
+                          <td>
+                            <box><img src="Images 1/Book.png" class="card-img-top" alt="b" height="200px"><span><h2 class="font1">BookMyShow</h2></span><p class="card-text">10% off</p><a href="#" class="btn btn-primary">Specifications</a></box></td>
+                    </tr></table>
+                    
+                  </div>
+                  <div class="carousel-item">
+                    <table><tr><td>
+                      <box><img src="Images 1/uber.jpg" class="card-img-top" alt="u" height="200px"><span><h2 class="font1">Uber</h2></span><p class="card-text">10% off</p><a href="#" class="btn btn-primary">Specifications</a></box></td><td>
+                        <td>
+                          <box><img src="Images 1/indiatv.jpg" class="card-img-top" alt="i" height="200px"><span><h2 class="font1">IndiaTV</h2></span><p class="card-text">15% Cashback</p><a href="#" class="btn btn-primary">Specifications</a></box></td>
+                          <td>
+                            <box><img src="Images 1/instagram.jpg" class="card-img-top" alt="i" height="200px"><span><h2 class="font1">Instagram</h2></span><p class="card-text">Rs. 100 off</p><a href="#" class="btn btn-primary">Specifications</a></box></td>
+                            <td>
+                              <box><img src="Images 1/Adobe.webp" class="card-img-top" alt="a" height="200px"><span><h2 class="font1">Adobe</h2></span><p class="card-text">10% off</p><a href="#" class="btn btn-primary">Specifications</a></box></td>
+                      </tr></table>
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+        
+                      
+                  
+          
+      
+        
+                </div><br><br>
+                <div id="item-2">
+                  <h2 class="font1">Social</h2>
+                  <p><p><div class="card-group" style="text-align:center;" id="2">
+                    
+          <table><tr><td>
+                          <box><img src="Images 1/Threads.png" class="card-img-top" alt="Microsoft" height="200px"><span><h2 class="font1">Threads</h2></span><p class="card-text">10% off</p><a href="#" class="btn btn-primary">Specifications</a></box></td><td>
+                            <td>
+                              <box><img src="Images 1/Whatsapp.png" class="card-img-top" alt="w" height="200px"><span><h2 class="font1">Whatsapp</h2></span><p class="card-text">15% Cashback</p><a href="#" class="btn btn-primary">Specifications</a></box></td>
+                              <td>
+                                <box><img src="Images 1/Twitter.jpg" class="card-img-top" alt="t" height="200px"><span><h2 class="font1">Twitter</h2></span><p class="card-text">Rs. 100 off</p><a href="#" class="btn btn-primary">Specifications</a></box></td>
+                                <td>
+                                  <box><img src="Images 1/youtube.jpg" class="card-img-top" alt="y" height="200px"><span><h2 class="font1">Youtube</h2></span><p class="card-text">10% off</p><a href="#" class="btn btn-primary">Specifications</a></box></td>
+                          </tr></table>
+                          
+                        
+             
+                </div><br><br>
+                <div id="item-3">
+                  <h2 class="font1">Work</h2>
+                  <p><p><div class="card-group" style="text-align:center;" id="3">
+                    <table><tr><td>
+                          <box><img src="Images 1/Zoom.jpg" class="card-img-top" alt="Microsoft" height="200px"><span><h2 class="font1">Zoom</h2></span><p class="card-text">10% off</p><a href="#" class="btn btn-primary">Specifications</a></box></td><td>
+                            <td>
+                              <box><img src="Images 1/paytm.png" class="card-img-top" alt="amazon" height="200px"><span><h2 class="font1">Paytm</h2></span><p class="card-text">15% Cashback</p><a href="#" class="btn btn-primary">Specifications</a></box></td>
+                              <td>
+                                <box><img src="Images 1/bootstrap.jpg" class="card-img-top" alt="zomato" height="200px"><span><h2 class="font1">Bootstrap</h2></span><p class="card-text">Rs. 100 off</p><a href="#" class="btn btn-primary">Specifications</a></box></td>
+                                <td>
+                                  <box><img src="Images 1/Google meet.jpg" class="card-img-top" alt="gm" height="200px"><span><h2 class="font1">Google Meet</h2></span><p class="card-text">10% off</p><a href="#" class="btn btn-primary">Specifications</a></box></td>
+                          </tr></table>
+                          
+                        </div>
+                        
+                            
+                        
+                
+            
+              
+                </div></div></div>
+            
+              </div>
+            </div>
+          </div>

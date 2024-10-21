@@ -354,3 +354,100 @@ h2 {
 .intro2 {
     font-size: 20px;
 }
+
+.TopGames2024 {
+    display: flex;
+    overflow-x: auto;
+    white-space: nowrap;
+    padding: 10px;
+}
+
+.slider-item {
+    display: inline-block;
+    width: 200px;
+    height: 175px;
+    margin-right: 30px;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    background-color: #0a0a0a;
+}
+
+.slider-item img {
+    width: 150px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.game-name {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+    color: #27f76d;
+    font-family: "Montserrat", sans-serif;
+    max-width: 150px; /* Limit the width of the text box */
+    white-space: nowrap; /* Prevent the text from wrapping to the next line */
+    overflow: hidden; /* Hide the overflow */
+    text-overflow: ellipsis; /* Show "..." when the text is too long */
+    margin-top: 10px;
+}
+
+.game-rating {
+    display: block;
+    margin-top: 5px;
+    color: #ffff;
+    font-family: "Montserrat", sans-serif;
+}
+
+
+
+body.modal-open {
+    overflow: hidden;
+}
+
+#modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    z-index: 1000;
+    overflow-y: auto;
+}
+
+.modal-content {
+    background-color: #1a1a1a;
+    margin: 5% auto;
+    padding: 20px;
+    width: 80%;
+    max-width: 600px;
+    border-radius: 10px;
+    text-align: center;
+    color: white;
+    font-family: "Montserrat", sans-serif;
+}
+
+.modal-content img {
+    width: 100%;
+    border-radius: 10px;
+    max-height: 300px;
+    object-fit: cover;
+}
+
+.modal-content button {
+    margin-top: 20px;
+    padding: 10px;
+    background: #27f76d;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.modal-content button:hover {
+    background: #22d261;
+}

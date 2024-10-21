@@ -46,9 +46,10 @@ async function showGameDetails(gameId) {
             <a href="https://rawg.io/games/${gameDetails.slug}" target="_blank">
                 <button>Website</button>
             </a>
-            <a href="https://www.youtube.com" target="_blank">
-                <button>BUY NOW!</button>
-            </a>
+            <a href="checkout.html?slug=${gameDetails.slug}" target="_blank">
+        <button>BUY NOW!</button>
+    </a>
+            <h3>Starting From: $59.90</h3>
         `;
 
         modal.style.display = 'block'; // Show modal
@@ -96,6 +97,7 @@ async function Upcoming2024() {
     try {
         const response = await fetch(proxyURL + Upurl + `&key=${API_KEY}&page_size=10`);
         const data2 = await response.json();
+        console.log(data2);
         const upGames = data2.results;
 
         upGames.forEach((game, index) => {

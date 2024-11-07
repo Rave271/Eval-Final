@@ -1,5 +1,5 @@
-const API_KEY = "b7522d165bf04e2ca15bbb1720942d7d";  // Your RAWG API Key
-const proxyURL = "http://localhost:8080/";  // Your local CORS Anywhere instance
+const API_KEY = "b7522d165bf04e2ca15bbb1720942d7d";
+const proxyURL = "http://localhost:8080/"; 
 const RatingURL = "https://api.rawg.io/api/games?dates=2024-01-01,2024-12-31&ordering=-rating";
 const Upurl = "https://api.rawg.io/api/games?dates=2024-01-01,2024-12-31&ordering=-added";
 const Ubiurl = "https://api.rawg.io/api/games?dates=2019-01-01,2019-12-31&developers=405";
@@ -28,13 +28,13 @@ function closeModal() {
     document.body.classList.remove('modal-open');
 }
 
-// Function to show modal with game details
+
 async function showGameDetails(gameId) {
     try {
         const response = await fetch(`${proxyURL}https://api.rawg.io/api/games/${gameId}?key=${API_KEY}`);
         const gameDetails = await response.json();
 
-        // Populate modal with game details
+        
         const modalContent = modal.querySelector('.modal-content');
         modalContent.innerHTML = `
             <h2>${gameDetails.name}</h2>
@@ -46,32 +46,28 @@ async function showGameDetails(gameId) {
             <a href="https://rawg.io/games/${gameDetails.slug}" target="_blank">
                 <button>Website</button>
             </a>
-            <a href="checkout.html?slug=${gameDetails.slug}" target="_blank">
+            <a href="cart.html?slug=${gameDetails.slug}" target="_blank">
         <button>BUY NOW!</button>
     </a>
             <h3>Starting From: $59.90</h3>
         `;
 
-        modal.style.display = 'block'; // Show modal
-        document.body.classList.add('modal-open'); // Prevent body from scrolling
+        modal.style.display = 'block'; 
+        document.body.classList.add('modal-open'); 
 
     } catch (error) {
         console.error("Error fetching game details: ", error);
     }
 }
-
-// Add click event listeners to each game item
 function addClickEvents() {
     const gameItems = document.querySelectorAll('.slider-item');
     gameItems.forEach((item, index) => {
         item.addEventListener('click', () => {
-            const gameId = item.getAttribute('data-game-id'); // Assuming you will add this attribute
+            const gameId = item.getAttribute('data-game-id'); 
             showGameDetails(gameId);
         });
     });
 }
-
-// Fetch Top Games
 async function TopGames2024() {
     try {
         const response = await fetch(proxyURL + RatingURL + `&key=${API_KEY}&page_size=10`);
@@ -92,7 +88,6 @@ async function TopGames2024() {
     }
 }
 
-// Fetch Upcoming Games
 async function Upcoming2024() {
     try {
         const response = await fetch(proxyURL + Upurl + `&key=${API_KEY}&page_size=10`);
@@ -113,8 +108,6 @@ async function Upcoming2024() {
         console.error("Error fetching game info: ", error);
     }
 }
-
-// Fetch Ubisoft Games
 async function Ubisoft2024() {
     try {
         const response = await fetch(proxyURL + Ubiurl + `&key=${API_KEY}&page_size=10`);
@@ -134,8 +127,6 @@ async function Ubisoft2024() {
         console.error("Error fetching game info: ", error);
     }
 }
-
-// Call the functions to fetch game data and add click events
 TopGames2024();
 Upcoming2024();
 Ubisoft2024();

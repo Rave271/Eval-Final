@@ -27,6 +27,7 @@ body::after {
 }
 
 h1 {
+    /* padding-right: 10px; */
     font-family: 'Incompleeta';
     color: #27f76d;
     text-align: center;
@@ -34,7 +35,7 @@ h1 {
     font-size: 50px;
     transform: rotate(90deg);
     position: absolute;
-    left: 0px;
+    left: -50px;
     top: 50%;
     transform: translateY(-50%) rotate(90deg);
 }

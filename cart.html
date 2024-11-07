@@ -2,11 +2,10 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="icon" href="Images/1.png" type="image/x-icon">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"> -->
     <link rel="stylesheet" type="text/css" href="CSS/3Rave's.css">
     <title>Cart</title>
-   
 </head>
 <body>
     <div class="parent-container">
@@ -19,36 +18,59 @@
             <hr class="divider">
             <div class="row">
                 <div class="item">
-                    <img src="Images/FronstPunk2.jpg" alt="item1" id="Gamepass">
-                    <h3 style=" padding-left:20px;">FrostPunk 2</h3>
+                    <img id="game-image" src="" alt="Game Cover" class="Gamepass">
+                    <h3 style="padding-left: 20px;" id="game-name"></h3>
                 </div>
                 <div class="quantity">
-                    <h3> 1</h3>
+                    <h3>1</h3>
                 </div>
                 <div class="price">
-                    <h3>₹1,399</h3>
+                    <h3>$59.99</h3>
                 </div>
             </div>
             <div class="row">
-            <hr class="divider2">
-            <h3>Billing:</h3>
-            <h3>Price:₹1,399</h3>
-            <h3>Tax:₹251.82</h3>
-        </div>
-        <h3 class="final-price">Final Price:₹1650.82</h3>
-        <div class="button-bx">
-            <button class="buttondark2" onclick="location.href = '#';">Checkout</button>
+                <hr class="divider2">
+                <h3>Billing:</h3>
+                <h3>Price: $59.99</h3>
+                <h3>Tax: $1.56</h3>
+            </div>
+            <h3 class="final-price">Final Price: $61.55</h3>
+            <div class="button-bx">
+                <button class="buttondark2" onclick="location.href='selection.html'">Checkout</button>
+            </div>
         </div>
     </div>
-   
-</div>
-
-
-
-  
-   
-   <h1 class="rotated-text">CART</h1>
-        
- 
+    <h1 class="rotated-text">CART</h1>
 </body>
+<script>
+    const API_KEY = "b7522d165bf04e2ca15bbb1720942d7d";  
+    const proxyURL = "http://localhost:8080/";  
+    
+  
+    const urlParams = new URLSearchParams(window.location.search);
+    const gameSlug = urlParams.get('slug');
+    
+    if (gameSlug) {
+        fetchGameDetails(gameSlug);
+    } else {
+        console.error("No game slug found in URL");
+    }
+    
+   
+    async function fetchGameDetails(slug) {
+        try {
+            const response = await fetch(`${proxyURL}https://api.rawg.io/api/games/${slug}?key=${API_KEY}`);
+            const gameDetails = await response.json();
+            console.log("Game Details:", gameDetails); 
+    
+           
+            document.getElementById('game-name').textContent = gameDetails.name;
+            document.getElementById('game-image').src = gameDetails.background_image || '';
+            console.log("Image URL:", gameDetails.background_image); 
+    
+        } catch (error) {
+            console.error("Error fetching game details: ", error);
+        }
+    }
+</script>
 </html>

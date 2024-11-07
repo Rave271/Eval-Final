@@ -55,11 +55,44 @@ nav {
 }
 
 .nav-img1, .nav-img2 {
-    margin-left: 50px;
     height: 50px;
     width: auto;
+    max-width: 100px; /* Ensure the image does not exceed this width */
 }
 
+@media (max-width: 768px) {
+    .nav-img1, .nav-img2 {
+        height: 40px;
+        max-width: 80px; /* Adjust the max-width for smaller screens */
+    }
+
+    .nav-items {
+        margin-left: 20px;
+        gap: 10px;
+    }
+
+    .navbar p {
+        margin: 0px 20px;
+        font-size: 14px; /* Adjust font size for smaller screens */
+    }
+}
+
+@media (max-width: 576px) {
+    .nav-img1, .nav-img2 {
+        height: 30px;
+        max-width: 60px; /* Adjust the max-width for smaller screens */
+    }
+
+    .nav-items {
+        margin-left: 10px;
+        gap: 5px;
+    }
+
+    .navbar p {
+        margin: 0px 10px;
+        font-size: 12px; /* Adjust font size for smaller screens */
+    }
+}
 h2 {
     font-family: 'Incompleeta';
     color: white;

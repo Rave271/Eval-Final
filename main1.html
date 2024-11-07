@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>
+    main1
+  </title>
+  <style>
+    #background-video {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      min-width: 100%;
+      min-height: 100%;
+      width: auto;
+      height: auto;
+      z-index: -1;
+      transform: translate(-50%, -50%);
+
+    }
+
+    .img,
+    .img1 {
+      height: 50px;
+      width: auto;
+    }
+
+    h4 {
+      display: flex;
+      align-items: center;
+      font-family: 'Incompleta';
+    }
+
+    .font {
+      font-family: 'Incompleta';
+      font-size: 100px;
+      color: white;
+    }
+
+    .font1,
+    .title {
+      font-family: 'Incompleta';
+      font-size: 40px;
+      color: white;
+    }
+
+    .main1 {
+      font-family: "Montserrat", system-ui;
+      background-color: #333;
+      overflow-x: auto;
+      white-space: nowrap;
+      padding: 10px;
+      display: flex;
+      gap: 30px;
+      color: white;
+    }
+
+    .main1 a {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      color: white;
+      text-align: center;
+      text-decoration: none;
+      padding: 20px 24px;
+      min-width: 300px;
+    }
+
+    .main1 img {
+      height: 350px;
+      width: 275px;
+      border-radius: 8px;
+      box-shadow: 25px 60px 10px rgba(0, 0, 0, 0.3);
+    }
+
+    .main1 a span {
+      margin-top: 12px;
+      display: block;
+    }
+
+    .main {
+      height: 600px;
+      width: 1200px;
+
+      @media (max-width: 1200px) {
+        .main {
+          height: 600px;
+          width: 1200px;
+        }
+      }
+
+      @media (max-width: 992px) {
+        .main {
+          height: 496px;
+          width: 992px;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .main {
+          height: 384px;
+          width: 768px;
+        }
+      }
+
+      @media (max-width: 576px) {
+        .main {
+          height: 288px;
+          width: 576px;
+        }
+      }
+
+      summary {
+        font-weight: bold;
+      }
+  </style>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/cff627a69e.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <video autoplay muted loop id="background-video">
+    <source src="Images 1/bgfilm.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+  <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
+    <div class="container-fluid">
+      <img src="Images 1/1.png" alt="Image" class="img">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Games</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Cart</a>
+          </li>
+        </ul>
+        <form class="d-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </nav><br><br>
+  <center>
+    <img src="Images 1/ALL SOFTWARE AT ONE PLACE.png" alt="" class="main"><br><br><br>
+    <h1 class="font">MOST POPULAR</h1>
+  </center>
+  <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel" data-bs-theme="dark">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="Images 1/Microsoft.jpg" class="d-block w-100" alt="Microsoft" height="500px">
+      </div>
+      <div class="carousel-item">
+        <img src="Images 1/Adobe.webp" class="d-block w-100" alt="Adobe" height="500px">
+      </div>
+      <div class="carousel-item">
+        <img src="Images 1/Uber.png" class="d-block w-100" alt="Windows" height="500px">
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
+      data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying"
+      data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div><br><br>
+  <center>
+    <h2 class="title">Recomended</h2>
+  </center>
+
+  <div class="main1" id="product-list">
+
+  </div>
+  <br><br>
+  <center>
+    <h2 class="title">Popular Titles</h2>
+  </center>
+  <div class="main1">
+    <a href="#"><img src="Images 1/Canva.png" alt="M"><span>
+        <h1>Canva</h1><br>
+        <details>
+          <summary><b>Specifications</b></summary>
+          <h2>Rs.1000</h2>
+          <p>Graphic design platform<br> for creating visuals, presentations,<br> and social media.</p><button onclick="location.href='softwarecart.html'">Buy
+            Now</button>
+        </details></a>
+    <a href="#"><img src="Images 1/youtube.jpg" alt="M"><span>
+        <h1>Youtube</h1><br>
+        <details>
+          <summary><b>Specifications</b></summary>
+          <h2>Rs.2000</h2>
+          <p>Video-sharing platform for<br> user-generated content and<br> entertainment worldwide.</p><button onclick="location.href='softwarecart.html'">Buy
+            Now</button>
+        </details></a>
+    <a href="#"><img src="Images 1/webex.jpg" alt="M"><span>
+        <h1>Webex</h1><br>
+        <details>
+          <summary><b>Specifications</b></summary>
+          <h2>Rs.1000</h2>
+          <p>Video conferencing tool for<br> online meetings and<br> collaboration solutions.</p><button onclick="location.href='softwarecart.html'">Buy
+            Now</button>
+        </details></a>
+    <a href="#"><img src="Images 1/Google meet.jpg" alt="M"><span>
+        <h1>Google Meet</h1><br>
+        <details>
+          <summary><b>Specifications</b></summary>
+          <h2>Rs.2000</h2>
+          <p>Secure video conferencing<br> service integrated with<br> Google Workspace tools.</p><button onclick="location.href='softwarecart.html'">Buy
+            Now</button>
+        </details></a>
+    <a href="#"><img src="Images 1/Threads.png" alt="M"><span>
+        <h1>Threads</h1><br>
+        <details>
+          <summary><b>Specifications</b></summary>
+          <h2>Rs.1000</h2>
+          <p>Social media app for<br> sharing updates, photos,<br> and connections.</p><button onclick="location.href='softwarecart.html'">Buy Now</button>
+        </details></a>
+    <a href="#"><img src="Images 1/Zoom.jpg" alt="M"><span>
+        <h1>Zoom</h1><br>
+        <details>
+          <summary><b>Specifications</b></summary>
+          <h2>Rs.2000</h2>
+          <p>Video conferencing platform<br> for meetings, webinars,<br> and online collaboration.</p><button onclick="location.href='softwarecart.html'">Buy
+            Now</button>
+        </details></a>
+    <a href="#"><img src="Images 1/Twitter.jpg" alt="M"><span>
+        <h1>Twitter</h1><br>
+        <details>
+          <summary><b>Specifications</b></summary>
+          <h2>Rs.1000</h2>
+          <p>Social media platform for<br> real-time news and<br> microblogging conversations.</p><button onclick="location.href='softwarecart.html'">Buy
+            Now</button>
+        </details></a>
+    <a href="#"><img src="Images 1/paytm.png" alt="M"><span>
+        <h1>Paytm</h1><br>
+        <details>
+          <summary><b>Specifications</b></summary>
+          <h2>Rs.2000</h2>
+          <p>Digital payment and<br> financial services platform<br> for transactions and shopping.</p><button onclick="location.href='softwarecart.html'">Buy
+            Now</button>
+        </details></a>
+  </div>
+  <script src="script1.js"></script>
+</body>
+
+</html>
